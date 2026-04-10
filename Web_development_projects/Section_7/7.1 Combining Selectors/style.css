@@ -1,0 +1,24 @@
+/* Write your code here: */
+h1, h2 {
+    color: blueviolet;
+}
+
+.box > p{
+    color: firebrick;
+}
+
+/* Descendant = Apply to a discendent of left side */
+
+.box li{
+    color : blue;
+}
+
+/* Chaining Method */
+
+li.done{
+    color: seagreen;
+}
+
+ul p.done{
+    font-size: 0.5rem;
+}
