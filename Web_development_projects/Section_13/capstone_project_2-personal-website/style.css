@@ -1,0 +1,11 @@
+body{
+    background-color: #FFFFFF;
+    font-family: "Merriweather", serif;
+}
+.rounded-lg-3{
+    border-radius: 50%;
+    width : 300px;
+    height : 300px;
+    object-fit: cover;
+    background-color: rgba(255, 0, 0, 0.5);
+}
