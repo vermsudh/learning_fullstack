@@ -30,7 +30,6 @@ console.log(loveScore);
 
 **Control statements (If / Else)**
 
-
 var firstName = prompt("Type your first name");
 var secondName = prompt("Type the name of your crush!");
 
@@ -55,9 +54,9 @@ The difference between === and ==
 
 === checks the datatype
 
-== only checks the value. 
+== only checks the value.
 
-For example : 
+For example :
 
 var a = 1;
 var b = "1";
@@ -96,7 +95,6 @@ yes
 
 <= Less than
 
-
 ---
 
 **Coding Question 1**
@@ -119,7 +117,7 @@ The message **MUST** be **returned** as an output from your function. You should
 
 ![](https://img-c.udemycdn.com/redactor/raw/2018-11-04_01-52-48-2aba9e6d99b92919d49d29a61b749809.jpg)
 
-Solution : 
+Solution :
 
 function bmiCalculator(weight, height) {
 
@@ -198,9 +196,7 @@ But the year 2100 is not a leap year because:
 3. If you really get stuck, you can see [the flow chart I created](https://bit.ly/36BjS2D).
 4. Try to run your code in [this Repl.it playground](https://repl.it/@appbrewery/Leap-year-challenge) and check it against the [known leap years](https://www.mathsisfun.com/leap-years.html).
 
-Answer: 
-
-    
+Answer:
 
 function isLeap(year) {
 
@@ -236,7 +232,6 @@ guestList[1] - > 'Jack'
 
 Quick Question: Check if the guest list matches the name of the person. If yes, welcome, if not print sorry next time.
 
-
 var guestList = ['Sudhanshu', 'Jack', 'Angela', 'Pam', 'Jim'];
 
 var guestName = prompt("What is your name");
@@ -248,13 +243,11 @@ else{
     alert("Sorry Next time");
 }
 
-
 ---
 
 **Important Question**
 
 ![1776256893585](image/intermediate_JS/1776256893585.png)
-
 
 // Write a function that ask the user to type a number and add that number into the array.Solution : function fizzBuzz(){
 
@@ -267,9 +260,7 @@ else{
 
 fizzBuzz();
 
-
 Solution of Fizz Buzz;
-
 
 var output = [];
 var count = 1;
@@ -293,12 +284,11 @@ function fizzBuzz(){
     console.log(output);
 }
 
-
 output : [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'FizzBuzz']
 
 ---
 
-**Coding Challenge 3** 
+**Coding Challenge 3**
 
 Who's Buying Lunch? Code Challenge
 
@@ -319,7 +309,7 @@ You are going to write a function which will select a random name from a list of
 1. You might need to think about [Array.length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length).
 2. Remember that Arrays start at position  **0** !
 
-Solution : 
+Solution :
 
 function whosPaying(names) {
 
@@ -338,8 +328,7 @@ function whosPaying(names) {
 /******Don't change the code below*******/
 }
 
-solution: 
-
+solution:
 
 function whosPaying(names) {
 
@@ -350,3 +339,208 @@ var randomPerson = names[randomPersonPosition];
 return randomPerson + " is going to buy lunch Today!";
 
 }
+
+---
+
+**While Loop**
+
+![1776403018373](image/intermediate_JS/1776403018373.png)
+
+var i = 1;
+
+while(i < 4){
+    console.log(i);
+    i++;
+
+}
+
+Solution : 1,2,3,4.
+
+**FIZZBUZZ in WHILE LOOP EXAMPLE**
+
+
+var output = [];
+var count = 1;
+
+function fizzBuzz(){
+
+    while(count <= 100){
+
+    if( count%3 === 0 && count % 5 === 0){
+            output.push("FizzBuzz");
+        }
+        else if(count%5 === 0){
+                output.push("Buzz");
+            }
+        else if(count %3 === 0 ){
+                output.push("Fizz");
+            }
+        else{
+            output.push(count);
+        }
+
+    count++;
+
+    console.log(output);
+    }
+}
+
+Practice Question:
+
+99 bottles of beer on the wall, 99 bottles of beer.
+Take one down and pass it around, 98 bottles of beer on the wall.
+
+Print this until the bottle is 1
+
+Last print : 
+
+No more bottles of beer on the wall, no more bottles of beer.
+Go to the store and buy some more, 99 bottles of beer on the wall.
+
+Ans : 
+
+var count = 99;
+
+function letsHaveAbeer(){
+    while(count >= 0){
+
+    if(count < 100 && count > 1){
+            console.log(+count+ " bottles of beer on the wall, " +count+" bottles of beer.");
+            console.log("Take one down and pass it around, " +(count - 1)+ " bottles of beer on the wall.");
+        }
+        else if(count === 1){
+            console.log(+count+ " bottles of beer on the wall, " +count+" bottles of beer.");
+            console.log("Take one down and pass it around, no more bottles of beer on the wall.");
+        }
+        else{
+            console.log("No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more, 99 bottles of beer on the wall.");
+        }
+        count--;
+    }
+}
+
+// Solution from the course:
+var numberOfBottles = 99
+while (numberOfBottles >= 0) {
+    var bottleWord = "bottle";
+    if (numberOfBottles === 1) {
+        bottleWord = "bottles";
+    }
+    console.log(numberOfBottles + " " + bottleWord + " of beer on the wall");
+    console.log(numberOfBottles + " " + bottleWord + " of beer,");
+    console.log("Take one down, pass it around,");
+	numberOfBottles--;
+    console.log(numberOfBottles + " " + bottleWord + " of beer on the wall.");
+}
+
+---
+
+**For Loop**
+
+![1776409565633](image/intermediate_JS/1776409565633.png)
+
+FIZZBUZZ example in while loop.
+
+var output = []
+
+function fizzBuzz(){
+
+    for(var count = 1; count <= 100; count++){
+
+    if(count%3 === 0 && count %5 === 0){
+            output.push("FizzBuzz");
+
+    }else if(count%3 === 0){
+            output.push("Fizz");
+
+    }else if(count%5 === 0){
+            output.push("Buzz");
+        }
+        else{
+            output.push(count);
+        }
+
+    }
+    console.log(output);
+}
+
+---
+
+**Coding Challenge : Fibonacci Challenge**
+
+
+The Fibonacci Exercise
+
+Fibonacci was an Italian mathematician who came up with the [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_number):
+
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 ...
+
+Where every number is the sum of the two previous ones.
+
+e.g. 0, 1, 1, 2, 3, 5 comes from
+
+0 + 1 = 1
+
+1 + 1 = 2
+
+1 + 2 = 3
+
+2 + 3 = 5
+
+etc.
+
+Create a function where you can call it by writing the code:
+
+`fibonacciGenerator (n)`
+
+Where **n** is the **number of items **in the sequence.
+
+So I should be able to call:
+
+`fibonacciGenerator(3)` and get
+
+[0,1,1]
+
+as the output.
+
+IMPORTANT: The solution checker is expecting an **array** as the correct output.
+
+Do **NOT** change any of the existing code.
+
+You do **NOT** need any **alerts** or  **prompts** , the result should be **returned** from the function as an  **output** .
+
+The **first two numbers** in the sequence must be **0** and  **1** .
+
+Also, if you decide to create a **for** loop, make sure you explicitly specify `var i = 0` rather than simply writing `i = 0` . This is a quirk of the testing suite.
+
+e.g. `for (var i = 0; i < 10; i ++)`
+
+HINT: Use [this Repl.it Playground](https://repl.it/@appbrewery/Fibonacci-Coding-Exercise) to test out your solution.
+
+HINT: Use [this flow chart](https://drive.google.com/file/d/1g8vVtqhSj44vcElfc-HK0nMbecteW8Yg/view?usp=sharing) to understand the logic if you get stuck.
+
+**Solution:**
+
+function fibonacciGenerator (n) {
+
+    var output = [];
+
+    for(var i = 0; i < n; i ++){
+
+    if(i === 0 ){
+            output.push(0);
+        }
+        else if(i === 1){
+            output.push(1);
+        }
+        else {
+            output.push(
+                output[output.length - 1] +
+                output[output.length - 2]
+            );
+        }
+
+    }//for loop ends
+
+    return output;
+}//function ends
