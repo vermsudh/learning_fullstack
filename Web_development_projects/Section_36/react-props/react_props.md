@@ -15,4 +15,4 @@
 ![1783838248557](image/react_props/1783838248557.png)
 
 
-Propa are basically you are creating a new JS objects.
+Propa are basically you are creating a new JS objec
