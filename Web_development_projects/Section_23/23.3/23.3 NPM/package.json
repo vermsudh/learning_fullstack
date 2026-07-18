@@ -4,12 +4,13 @@
   "description": "I am learning about NPM",
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "sillyname": "^0.1.0"
+    "sillyname": "^0.1.0",
+    "superhero": "^2.15.3"
   }
 }
